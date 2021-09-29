@@ -1,0 +1,43 @@
+{%extends 'base.html'%}
+{%block title%}services |{%endblock title%}
+{%block body%}
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://source.unsplash.com/1600x600/?gmail" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>services</h5>
+          <p>select our services</p>
+        </div>
+      </div>
+      
+      
+    
+    
+  </div>
+  <form method="post" action="/services">
+    {%csrf_token%}
+    <div class="mb-3">
+      <label for="name" class="form-label">name</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="enter your name">
+      
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="enter your email">
+      
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">phone number</label>
+      <input type="phone" class="form-control" id="phone" name="phone" placeholder="enter your phone number">
+      
+    </div>
+    <div class="mb-3">
+      <label for="desc" class="form-label">tell which services you want</label>
+      <input type="text" class="form-control" id="desc" name="desc" placeholder="enter any service you want">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{%endblock body%}
